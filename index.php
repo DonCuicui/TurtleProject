@@ -1,9 +1,17 @@
 <?php
-echo "<h1>Turtle Project</h1>";
+$message = "<ul>";
 
-/**
- * Created by PhpStorm.
- * User: alexa
- * Date: 09/04/2018
- * Time: 14:56
- */
+$depart = -17827;
+$arrive = 14568;
+while ($depart <= $arrive)
+{
+    $resteModulo = $depart % 24;
+    if ($resteModulo == 0) {
+        $message .= "<li>";
+        $message .= $depart;
+        $message .= "</li>";
+    }
+    $depart += 7;
+}
+$message .= "</ul>";
+echo $message;
